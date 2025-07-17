@@ -1,79 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aditi Abhyankar - Legal Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Abhyankar - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Aditi Abhyankar</h1>
-    <p>Lawyer | Company Secretary | Regulatory Expert</p>
-    <nav>
-      <a href="#summary">Summary</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Aditi Abhyankar</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#summary" class="nav-link">Summary</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#competencies" class="nav-link">Competencies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <section id="summary">
-      <h2>Professional Summary</h2>
-      <p>India-qualified lawyer and Company Secretary with over 7 years of experience in corporate law, fund structuring, and regulatory compliance. LL.M. from Queen Mary University of London with expertise in AIF/PMS funds, contract negotiation, legal advisory, and cross-border regulatory matters.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Aditi Abhyankar</h1>
+                <p class="hero-subtitle">Professional Portfolio</p>
+                <p class="hero-description">
+                    India-qualified lawyer and Company Secretary with over 7 years of experience in corporate law, 
+                    fund structuring, and regulatory compliance. LL.M. from Queen Mary University of London with 
+                    expertise in AIF/PMS funds, contract negotiation, legal advisory, and cross-border regulatory matters.
+                </p>
+                <div class="hero-buttons">
+                    <a href="assets/Aditi_Abhyankar_Resume_2025.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#summary" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image">
+                    <img src="profile.jpg" alt="Aditi Abhyankar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="profile-placeholder" style="display: none;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="experience">
-      <h2>Professional Experience</h2>
-      <h3>Legal & Compliance – Manager | Aequitas Investment Consultancy Pvt. Ltd. | Mar 2024 – Present</h3>
-      <ul>
-        <li>Relocated FPI fund from DIFC to GIFT City, managing regulatory transition.</li>
-        <li>Structured and launched two AIF Category III funds.</li>
-        <li>Handled AIF, PMS, and FPI compliance under SEBI and IFSCA.</li>
-        <li>Implemented digital PMS onboarding system.</li>
-      </ul>
-
-      <h3>Legal Associate | Linkin Law | Feb 2021 – Sep 2022</h3>
-      <ul>
-        <li>Drafted 100+ commercial contracts.</li>
-        <li>Advised fintechs and startups on regulatory compliance.</li>
-      </ul>
-
-      <h3>Legal Associate | Wazalwar and Associates | Apr 2019 – Feb 2021</h3>
-      <ul>
-        <li>Drafted 150+ litigation documents for IBC/NCLT cases.</li>
-      </ul>
-
-      <h3>Company Secretary Management Trainee | Shweta Gokarn & Co. | Oct 2017 – Feb 2019</h3>
-      <ul>
-        <li>Conducted board/AGM/EGM meetings, ensured regulatory compliance.</li>
-      </ul>
+    <!-- Professional Summary -->
+    <section id="summary" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary-content">
+                <p>
+                    India-qualified lawyer and Company Secretary with over 7 years of experience in corporate law, 
+                    fund structuring, and regulatory compliance. Demonstrated ability to lead complex regulatory 
+                    transitions, structure investment funds, and ensure compliance across multiple jurisdictions. 
+                    Proven track record of delivering results through strategic legal thinking, regulatory expertise, 
+                    and effective stakeholder management.
+                </p>
+                <p>
+                    Skilled in AIF/PMS fund structuring, contract negotiation, and regulatory compliance with expertise 
+                    in SEBI, IFSCA, and cross-border regulatory frameworks. Committed to continuous learning and staying 
+                    current with evolving regulatory landscapes and best practices in financial services.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section id="education">
-      <h2>Education & Qualifications</h2>
-      <ul>
-        <li><strong>LL.M. in Commercial and Corporate Law</strong> – Queen Mary University of London (2022–2023)</li>
-        <li><strong>Company Secretary</strong> – ICSI, India (Membership No. A64480)</li>
-        <li><strong>Advocate (AIBE Cleared)</strong> – Enrolled in 2017</li>
-        <li><strong>BSL, LLB</strong> – ILS Law College, Pune (2011–2016)</li>
-      </ul>
+    <!-- Core Competencies -->
+    <section id="competencies" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="competencies-grid">
+                <div class="competency-category">
+                    <h3>Legal Expertise</h3>
+                    <ul class="skill-list">
+                        <li>Corporate Law & Compliance</li>
+                        <li>Fund Structuring (AIF/PMS)</li>
+                        <li>Contract Drafting & Negotiation</li>
+                        <li>Regulatory Advisory</li>
+                    </ul>
+                </div>
+                <div class="competency-category">
+                    <h3>Regulatory Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>SEBI Regulations</li>
+                        <li>IFSCA Guidelines</li>
+                        <li>FEMA & RBI Compliance</li>
+                        <li>Cross-border Regulations</li>
+                    </ul>
+                </div>
+                <div class="competency-category">
+                    <h3>Professional Skills</h3>
+                    <ul class="skill-list">
+                        <li>Due Diligence & Risk Assessment</li>
+                        <li>Stakeholder Management</li>
+                        <li>Legal Research & Analysis</li>
+                        <li>Board & Corporate Governance</li>
+                    </ul>
+                </div>
+                <div class="competency-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul class="skill-list">
+                        <li>Legal Research Databases</li>
+                        <li>Compliance Management Systems</li>
+                        <li>Digital Onboarding Platforms</li>
+                        <li>Document Management Tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:aditiabhyankar.a@gmail.com">aditiabhyankar.a@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/aditiabhyankar" target="_blank">linkedin.com/in/aditiabhyankar</a></p>
-      <p>Location: Mumbai, India</p>
-      <p><a href="assets/Aditi_Abhyankar_Resume_2025.pdf" download>📄 Download Resume</a></p>
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Legal & Compliance – Manager</h3>
+                        <h4>Aequitas Investment Consultancy Pvt. Ltd., Mumbai</h4>
+                        <p class="timeline-date">Mar 2024 - Present</p>
+                        <ul>
+                            <li>Led the strategic relocation of the firm's FPI fund from DIFC to GIFT City, ensuring seamless regulatory transition</li>
+                            <li>Structured and launched two AIF Category III funds in GIFT City, managing drafting, approvals, and trustee coordination</li>
+                            <li>Oversaw compliance for AIF, PMS, and FPI operations under SEBI and IFSCA frameworks</li>
+                            <li>Implemented a digital PMS onboarding portal, improving investor experience and regulatory alignment</li>
+                            <li>Liaised with regulators and legal counsel to address compliance matters and cross-border structuring</li>
+                            <li>Resolved investor and operational queries through proactive legal advisory</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Legal Associate</h3>
+                        <h4>Linkin Law, Mumbai</h4>
+                        <p class="timeline-date">Feb 2021 - Sep 2022</p>
+                        <ul>
+                            <li>Drafted and negotiated 100+ commercial contracts, optimizing execution time and minimizing legal risk</li>
+                            <li>Advised fintechs, NBFCs, and startups on secretarial and regulatory compliance</li>
+                            <li>Led due diligence and transaction documentation for 20+ private equity and debt deals</li>
+                            <li>Resolved client disputes with vendors and customers through strategic negotiation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Legal Associate</h3>
+                        <h4>Wazalwar and Associates, Mumbai</h4>
+                        <p class="timeline-date">Apr 2019 - Feb 2021</p>
+                        <ul>
+                            <li>Drafted 150+ litigation documents under IBC and Companies Act for NCLT/NCLAT cases</li>
+                            <li>Assisted senior counsel with hearings, pleadings, and client representation</li>
+                            <li>Managed legal research, evidence files, and case coordination with external parties</li>
+                            <li>Interviewed clients and prepared case briefs to support litigation strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Company Secretary Management Trainee</h3>
+                        <h4>Shweta Gokarn & Co., Mumbai</h4>
+                        <p class="timeline-date">Oct 2017 - Feb 2019</p>
+                        <ul>
+                            <li>Ensured regulatory compliance for 10+ companies, including filings, FEMA, and board processes</li>
+                            <li>Conducted 20+ Board, AGM, and EGM meetings; drafted minutes and served as poll scrutinizer</li>
+                            <li>Facilitated incorporation of private companies and LLPs and filed trademark applications</li>
+                            <li>Prepared legal snapshots and governance advisory reports based on statutory analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Aditi Abhyankar</p>
-  </footer>
+    <!-- Education -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>LL.M. in Commercial and Corporate Law</h3>
+                            <h4>Queen Mary University of London</h4>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <p class="education-date">2022 - 2023</p>
+                        <p>Modules: Comparative Contract Law, Global Intellectual Property, Insolvency Corporate Rescue and Cross-border, Legal Tech, EU Trade Law, Commercialisation of IP</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>Company Secretary</h3>
+                            <h4>Institute of Company Secretaries of India (ICSI)</h4>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <p class="education-date">2017</p>
+                        <p>Membership No.: A64480</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>All India Bar Exam</h3>
+                            <h4>Enrolled Advocate in India</h4>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <p class="education-date">2017</p>
+                        <p>Qualified to practice law in India</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>BSL, LLB</h3>
+                            <h4>ILS Law College, Pune</h4>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <p class="education-date">2011 - 2016</p>
+                        <p>Bachelor of Law degree with comprehensive legal education</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certifications">
+                <h3>Additional Training & Expertise</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Fund Structuring & Regulatory Compliance</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Cross-border Legal Advisory</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Contract Negotiation & Due Diligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="assets/js/script.js"></script>
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>aditiabhyankar.a@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://linkedin.com/in/aditiabhyankar" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/aditiabhyankar</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mumbai, India</span>
+                    </div>
+                </div>
+                <div class="contact-actions">
+                    <a href="mailto:aditiabhyankar.a@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                    <a href="assets/Aditi_Abhyankar_Resume_2025.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Abhyankar. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#summary">Summary</a>
+                <a href="#competencies">Competencies</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST_TITLE - Aditi Abhyankar</title>
+    <meta name="description" content="POST_EXCERPT">
+    <meta name="keywords" content="POST_TAGS">
+    <meta name="author" content="Aditi Abhyankar">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="POST_TITLE">
+    <meta property="og:description" content="POST_EXCERPT">
+    <meta property="og:image" content="POST_IMAGE">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="POST_URL">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link rel="stylesheet" href="../assets/css/blog-post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Aditi Abhyankar</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#summary" class="nav-link">Summary</a></li>
+                <li><a href="../index.html#competencies" class="nav-link">Competencies</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="post-header">
+        <div class="container">
+            <div class="post-meta">
+                <a href="../blog.html" class="back-to-blog">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+                <div class="post-category-badge">POST_CATEGORY</div>
+            </div>
+            <h1 class="post-title">POST_TITLE</h1>
+            <div class="post-info">
+                <div class="post-author">
+                    <i class="fas fa-user"></i>
+                    <span>Aditi Abhyankar</span>
+                </div>
+                <div class="post-date">
+                    <i class="fas fa-calendar"></i>
+                    <span>POST_DATE</span>
+                </div>
+                <div class="post-read-time">
+                    <i class="fas fa-clock"></i>
+                    <span>POST_READ_TIME</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="post-featured-image">
+        <img src="POST_IMAGE" alt="POST_TITLE">
+    </div>
+
+    <!-- Blog Post Content -->
+    <article class="post-content">
+        <div class="container">
+            <div class="post-body">
+                <!-- Replace this section with your actual blog content -->
+                <p class="post-excerpt">POST_EXCERPT</p>
+                
+                <h2>Introduction</h2>
+                <p>This is where your blog post content begins. Replace this template content with your actual article.</p>
+                
+                <h2>Main Section 1</h2>
+                <p>Add your main content sections here. You can include:</p>
+                <ul>
+                    <li>Bullet points</li>
+                    <li>Numbered lists</li>
+                    <li>Code snippets</li>
+                    <li>Quotes and references</li>
+                </ul>
+                
+                <h2>Main Section 2</h2>
+                <p>Continue with your article content. You can add images, tables, and other elements as needed.</p>
+                
+                <blockquote>
+                    <p>"This is an example quote that you can use to highlight important points in your article."</p>
+                    <cite>- Source or Author</cite>
+                </blockquote>
+                
+                <h2>Conclusion</h2>
+                <p>Wrap up your article with a strong conclusion that summarizes the key points and provides actionable insights.</p>
+            </div>
+            
+            <!-- Tags -->
+            <div class="post-tags">
+                <h3>Tags:</h3>
+                <div class="tag-list">
+                    <!-- Tags will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Share Buttons -->
+            <div class="post-share">
+                <h3>Share this article:</h3>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn share-twitter" onclick="shareOnTwitter()">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="#" class="share-btn share-linkedin" onclick="shareOnLinkedIn()">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" class="share-btn share-email" onclick="shareViaEmail()">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Related Posts -->
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <div class="related-posts-grid">
+                    <!-- Related posts will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Abhyankar. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#summary">Summary</a>
+                <a href="../index.html#competencies">Competencies</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#education">Education</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/blog-post.js"></script>
+</body>
+</html> 
