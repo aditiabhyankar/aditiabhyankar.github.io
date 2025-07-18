@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initBlogPost() {
+    // Initialize reading progress
+    initReadingProgress();
+    
     // Initialize tags
     initTags();
     
@@ -19,6 +22,23 @@ function initBlogPost() {
     
     // Add table of contents functionality
     initTableOfContents();
+    
+    // Estimate reading time
+    estimateReadingTime();
+}
+
+// Initialize reading progress
+function initReadingProgress() {
+    const progressBar = document.querySelector('.reading-progress-bar');
+    if (!progressBar) return;
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        
+        progressBar.style.width = Math.min(scrollPercent, 100) + '%';
+    });
 }
 
 // Initialize tags
@@ -92,47 +112,34 @@ function loadRelatedPosts() {
 function getRelatedPosts() {
     return [
         {
-            title: "Digital Transformation in Legal Compliance: Tools and Strategies",
-            date: "January 10, 2025",
-            image: "../blog/images/post-1.jpg",
-            url: "../blog/posts/post-1.html"
+            title: "Best Practices in Cross-border Contract Negotiation",
+            date: "January 5, 2025",
+            icon: "fas fa-handshake",
+            url: "post-2.html"
         },
         {
             title: "SEBI's New Guidelines: Impact on Fund Management",
             date: "December 28, 2024",
-            image: "../blog/images/post-3.jpg",
-            url: "../blog/posts/post-3.html"
-        },
-        {
-            title: "IP Protection Strategies for Fintech Startups",
-            date: "December 20, 2024",
-            image: "../blog/images/post-4.jpg",
-            url: "../blog/posts/post-4.html"
+            icon: "fas fa-chart-line",
+            url: "post-3.html"
         }
     ];
 }
 
 // Create related post element
 function createRelatedPostElement(post) {
-    const article = document.createElement('article');
+    const article = document.createElement('div');
     article.className = 'related-post';
     
     article.innerHTML = `
         <div class="related-post-image">
-            <img src="${post.image}" alt="${post.title}" onerror="this.style.display='none'">
+            <i class="${post.icon}"></i>
         </div>
         <div class="related-post-content">
-            <h4 class="related-post-title">${post.title}</h4>
-            <p class="related-post-date">${post.date}</p>
+            <a href="${post.url}" class="related-post-title">${post.title}</a>
+            <div class="related-post-date">${post.date}</div>
         </div>
     `;
-    
-    // Add click handler
-    article.addEventListener('click', function() {
-        window.location.href = post.url;
-    });
-    
-    article.style.cursor = 'pointer';
     
     return article;
 }
@@ -160,55 +167,23 @@ function initSmoothScrolling() {
 
 // Initialize table of contents
 function initTableOfContents() {
-    const postBody = document.querySelector('.post-body');
-    if (!postBody) return;
+    const toc = document.querySelector('.toc');
+    if (!toc) return;
     
-    const headings = postBody.querySelectorAll('h2, h3');
-    if (headings.length < 3) return; // Only show TOC if there are enough headings
-    
-    const toc = createTableOfContents(headings);
-    if (toc) {
-        postBody.insertBefore(toc, postBody.firstChild);
-    }
-}
-
-// Create table of contents
-function createTableOfContents(headings) {
-    const toc = document.createElement('div');
-    toc.className = 'table-of-contents';
-    toc.innerHTML = `
-        <h3>Table of Contents</h3>
-        <ul class="toc-list"></ul>
-    `;
-    
-    const tocList = toc.querySelector('.toc-list');
-    
-    headings.forEach((heading, index) => {
-        // Add ID to heading if it doesn't have one
-        if (!heading.id) {
-            heading.id = `heading-${index}`;
-        }
-        
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = `#${heading.id}`;
-        a.textContent = heading.textContent;
-        a.className = heading.tagName.toLowerCase() === 'h3' ? 'toc-subitem' : 'toc-item';
-        
-        li.appendChild(a);
-        tocList.appendChild(li);
-        
-        // Add click handler for smooth scrolling
-        a.addEventListener('click', function(e) {
+    const tocLinks = toc.querySelectorAll('a');
+    tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
-            heading.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
-    
-    return toc;
 }
 
 // Add reading time estimation
@@ -220,36 +195,66 @@ function estimateReadingTime() {
     const wordCount = text.split(/\s+/).length;
     const readingTime = Math.ceil(wordCount / 200); // Average reading speed: 200 words per minute
     
-    const readTimeElement = document.querySelector('.post-read-time span');
+    const readTimeElement = document.querySelector('.post-info .far.fa-clock + span');
     if (readTimeElement) {
         readTimeElement.textContent = `${readingTime} min read`;
     }
 }
 
-// Add progress bar for reading
-function initReadingProgress() {
-    const progressBar = document.createElement('div');
-    progressBar.className = 'reading-progress';
-    progressBar.innerHTML = '<div class="reading-progress-bar"></div>';
-    document.body.appendChild(progressBar);
+// Add intersection observer for animations
+function initAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
     
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        
-        const progressBarElement = progressBar.querySelector('.reading-progress-bar');
-        progressBarElement.style.width = scrollPercent + '%';
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.post-body, .post-tags, .post-share, .toc, .related-posts');
+    animatedElements.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
     });
 }
 
-// Initialize reading progress
-if (typeof window !== 'undefined') {
-    window.addEventListener('load', function() {
-        estimateReadingTime();
-        initReadingProgress();
-    });
+// Initialize animations when page loads
+window.addEventListener('load', function() {
+    initAnimations();
+});
+
+// Add mobile menu functionality
+function initMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
 }
+
+// Initialize mobile menu
+document.addEventListener('DOMContentLoaded', function() {
+    initMobileMenu();
+});
 
 // Add CSS for table of contents and reading progress
 const additionalStyles = `

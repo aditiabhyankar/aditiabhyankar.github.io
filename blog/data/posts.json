@@ -1,16 +1,4 @@
 {
-  "featured": {
-    "id": "featured-1",
-    "title": "The Future of AIF Regulations in GIFT City: A Legal Perspective",
-    "category": "Corporate Law",
-    "date": "2025-01-15",
-    "excerpt": "As GIFT City continues to evolve as India's premier international financial services center, the regulatory landscape for Alternative Investment Funds (AIFs) is undergoing significant transformation. This article explores the latest regulatory developments and their implications for fund managers and investors.",
-    "image": "blog/images/featured-post.jpg",
-    "badge": "Featured",
-    "tags": ["AIF", "GIFT City", "Regulations", "Fund Management"],
-    "readTime": "8 min read",
-    "author": "Aditi Abhyankar"
-  },
   "posts": [
     {
       "id": "post-1",
@@ -35,132 +23,18 @@
       "tags": ["Contract Law", "Cross-border", "Negotiation", "International"],
       "readTime": "7 min read",
       "author": "Aditi Abhyankar"
-    },
-    {
-      "id": "post-3",
-      "title": "SEBI's New Guidelines: Impact on Fund Management",
-      "category": "Regulatory Compliance",
-      "date": "2024-12-28",
-      "excerpt": "Analysis of recent SEBI circulars and their implications for fund managers, including new disclosure requirements and investor protection measures.",
-      "image": "blog/images/post-3.jpg",
-      "badge": "Compliance",
-      "tags": ["SEBI", "Fund Management", "Regulations", "Compliance"],
-      "readTime": "5 min read",
-      "author": "Aditi Abhyankar"
-    },
-    {
-      "id": "post-4",
-      "title": "IP Protection Strategies for Fintech Startups",
-      "category": "Intellectual Property",
-      "date": "2024-12-20",
-      "excerpt": "Comprehensive guide to protecting intellectual property in the fintech sector, covering patents, trademarks, and trade secrets.",
-      "image": "blog/images/post-4.jpg",
-      "badge": "IP Law",
-      "tags": ["IP Law", "Fintech", "Patents", "Trademarks"],
-      "readTime": "9 min read",
-      "author": "Aditi Abhyankar"
-    },
-    {
-      "id": "post-5",
-      "title": "Board Effectiveness in the Digital Age",
-      "category": "Corporate Governance",
-      "date": "2024-12-15",
-      "excerpt": "How boards can adapt to digital transformation, including virtual meetings, cybersecurity oversight, and technology governance.",
-      "image": "blog/images/post-5.jpg",
-      "badge": "Governance",
-      "tags": ["Corporate Governance", "Digital Transformation", "Board", "Cybersecurity"],
-      "readTime": "6 min read",
-      "author": "Aditi Abhyankar"
-    },
-    {
-      "id": "post-6",
-      "title": "Brexit's Impact on Cross-border Financial Services",
-      "category": "International Law",
-      "date": "2024-12-10",
-      "excerpt": "Analysis of post-Brexit regulatory changes and their implications for financial services firms operating between the UK and EU.",
-      "image": "blog/images/post-6.jpg",
-      "badge": "International",
-      "tags": ["Brexit", "International Law", "Financial Services", "EU"],
-      "readTime": "8 min read",
-      "author": "Aditi Abhyankar"
-    },
-    {
-      "id": "post-7",
-      "title": "IFSCA's New Framework for Digital Banking",
-      "category": "Regulatory Updates",
-      "date": "2024-12-05",
-      "excerpt": "Analysis of the International Financial Services Centres Authority's latest guidelines for digital banking operations in GIFT City.",
-      "image": "blog/images/post-7.jpg",
-      "badge": "Digital",
-      "tags": ["IFSCA", "Digital Banking", "GIFT City", "Regulations"],
-      "readTime": "7 min read",
-      "author": "Aditi Abhyankar"
-    },
-    {
-      "id": "post-8",
-      "title": "AI-Powered Contract Analysis: A Game Changer",
-      "category": "Legal Technology",
-      "date": "2024-11-30",
-      "excerpt": "How artificial intelligence is revolutionizing contract review and analysis in legal practice.",
-      "image": "blog/images/post-8.jpg",
-      "badge": "AI",
-      "tags": ["AI", "Legal Tech", "Contract Analysis", "Automation"],
-      "readTime": "6 min read",
-      "author": "Aditi Abhyankar"
-    },
-    {
-      "id": "post-9",
-      "title": "Merger Control in India: Recent Developments",
-      "category": "Corporate Law",
-      "date": "2024-11-25",
-      "excerpt": "Overview of recent changes in India's merger control regime and their implications for corporate transactions.",
-      "image": "blog/images/post-9.jpg",
-      "badge": "Mergers",
-      "tags": ["Merger Control", "Corporate Law", "India", "Transactions"],
-      "readTime": "8 min read",
-      "author": "Aditi Abhyankar"
     }
   ],
   "categories": [
-    {
-      "name": "Corporate Law",
-      "slug": "corporate-law",
-      "description": "Articles on corporate legal matters and business law"
-    },
     {
       "name": "Legal Technology",
       "slug": "legal-technology",
       "description": "Technology trends and tools in legal practice"
     },
     {
-      "name": "Regulatory Compliance",
-      "slug": "regulatory-compliance",
-      "description": "Compliance and regulatory updates"
-    },
-    {
-      "name": "Intellectual Property",
-      "slug": "intellectual-property",
-      "description": "IP law and protection strategies"
-    },
-    {
-      "name": "Corporate Governance",
-      "slug": "corporate-governance",
-      "description": "Board governance and corporate structure"
-    },
-    {
-      "name": "International Law",
-      "slug": "international-law",
-      "description": "Cross-border legal matters"
-    },
-    {
       "name": "Contract Law",
       "slug": "contract-law",
       "description": "Contract drafting and negotiation"
-    },
-    {
-      "name": "Regulatory Updates",
-      "slug": "regulatory-updates",
-      "description": "Latest regulatory developments"
     }
   ]
 } 
